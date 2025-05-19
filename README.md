@@ -28,7 +28,7 @@ and then start the container
 
 to start the service. 
 
-# Using the TSN Scheduler
+# Using the Port Scheduler
 The current implementation, supports schedule generation in the form of a http JSON requests, that describe the requirements, in terms of trucks and delivery targets.
 Example of a Json Request
 ```json
