@@ -29,7 +29,7 @@ and then start the container
 to start the service. 
 
 # Using the TSN Scheduler
-The current implementation, supports TSN schedule generation in the form of a http JSON requests, that describe the requirements, in terms of trucks and delivery targets.
+The current implementation, supports schedule generation in the form of a http JSON requests, that describe the requirements, in terms of trucks and delivery targets.
 Example of a Json Request
 ```json
   {
@@ -70,9 +70,58 @@ Example of a Json Request
 }
 ```
 
-"Trucks:" is the number of trucks available, "reach_stacker:" and "containers:" is a list of containers with service type and destination. The "reach_stacker:" is ignored in cases of forming the daily plan, however it is *necessary* in cases of replaning.
+"Trucks:" is the number of trucks available (if missing then we assume 5 trucks), "reach_stacker:" is teh position of the reach stacker and "containers:" is a list of containers with service type and destination. The "reach_stacker:" is ignored in cases of forming the daily plan, however it is *necessary* in cases of replanning (see below).
+
+
+## Invoking the Scheduler
+
+The scheduler can generate output, either targeting a daily plan or a replan. 
+
+### daily schedule
+Interacting with the scheduler obtaining a solution for the deliveries of the day, is invoked via the API path:
+
+```
+GET http://<host>:<port>/port_schedule/daily
+```
+
+with payload the JSON request file, described above. 
+
+For instance, assume that the scheduler is running in the local host, on port 8080 and the JSON file that contains the request is "test5.json", the corresponding curl command is:
+```
+curl -v -X GET -H "Content-Type: application/json" --data @test5.json http://localhost:8080/port_schedule/daily
+``` 
+
+In this case, the answer is in the form of JSON, contains the path of the reach stacker and the assignments to trucks.
+
+
+### replan
+
+In some cases, the scheduler needs to replan the deliveries for some reason during the execution of the plan. In this case, the position of reach stacker is necessary along with any information on the undelivered containers. In this case the api path is 
+
+```
+GET http://<host>:<port>/port_schedule/replan
+```
+with payload a JSON file that necessarily contains the reach stacker position.
+
+For instance run:
+
+```
+curl -v -X GET -H "Content-Type: application/json" --data @test5.json http://localhost:8080/port_schedule/replan
+``` 
+
+and observe that a different schedule is generated. 
+
+### Health Check
+
+In order to check whether the scheduler is ready (upon initialization) use the API path:
+
+```
+GET http://<host>:<port>/port_schedule/health
+```
+
+This is very useful, when using the container as a side car. 
 
 
 
-
+# Final Note
 Scheduler implemented in ECLiPSe Prolog.
