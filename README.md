@@ -119,7 +119,7 @@ In order to check whether the scheduler is ready (upon initialization) use the A
 GET http://<host>:<port>/port_schedule/health
 ```
 
-This is very useful, when using the container as a side car. 
+This is very useful, when using the container as a side car. You should get back an "OK" if the scheduler is ready.
 
 
 
