@@ -30,6 +30,46 @@ to start the service.
 
 # Using the TSN Scheduler
 The current implementation, supports TSN schedule generation in the form of a http JSON requests, that describe the requirements, in terms of trucks and delivery targets.
+Example of a Json Request
+```json
+  {
+    "trucks":2,
+    "reach_stacker_at":"C22",
+    "containers": [
+        {
+            "id": 1,
+            "service_type": "STUFF",
+            "warehouse": "Z32C",
+            "type": "KO"
+        },
+        {
+            "id": 2,
+            "service_type": "STUFF",
+            "warehouse": "Z13B",
+            "type": "KO"
+        },
+        {
+            "id": 3,
+            "service_type": "STRIP",
+            "warehouse": "Z33D",
+            "type": "ZA"
+        },
+        {
+            "id": 4,
+            "service_type": "STRIP",
+            "warehouse": "Z51A",
+            "type": "ZA"
+        },
+        {
+            "id": 5,
+            "service_type": "STRIP",
+            "warehouse": "Z33B",
+            "type": "KO"
+        }
+    ]
+}```
+
+"Trucks:" is the number of trucks available, "reach_stacker:" and "containers:" is a list of containers with service type and destination. The "reach_stacker:" is ignored in cases of forming the daily plan, however it is *necessary* in cases of replaning.
 
 
 
