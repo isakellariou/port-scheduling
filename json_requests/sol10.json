@@ -1,0 +1,121 @@
+{
+  "reach_stacker": [
+    {
+      "container": 5,
+      "warehouse": "Z33B"
+    },
+    {
+      "container": 3,
+      "warehouse": "Z33D"
+    },
+    {
+      "container": 1,
+      "warehouse": "Z32C"
+    },
+    {
+      "container": 8,
+      "warehouse": "Z26C"
+    },
+    {
+      "container": 6,
+      "warehouse": "ZL4B"
+    },
+    {
+      "container": 10,
+      "warehouse": "Z50B"
+    },
+    {
+      "container": 4,
+      "warehouse": "Z51A"
+    },
+    {
+      "container": 2,
+      "warehouse": "Z13B"
+    },
+    {
+      "container": 9,
+      "warehouse": "NPC"
+    },
+    {
+      "container": 7,
+      "warehouse": "C22"
+    }
+  ],
+  "trucks": [
+    {
+      "truck": "tr1",
+      "path": [
+        {
+          "container": 5,
+          "start": "docks",
+          "end": "Z33B"
+        },
+        {
+          "container": 10,
+          "start": "empty_containers_dock",
+          "end": "Z50B"
+        }
+      ]
+    },
+    {
+      "truck": "tr2",
+      "path": [
+        {
+          "container": 3,
+          "start": "docks",
+          "end": "Z33D"
+        },
+        {
+          "container": 4,
+          "start": "docks",
+          "end": "Z51A"
+        }
+      ]
+    },
+    {
+      "truck": "tr3",
+      "path": [
+        {
+          "container": 1,
+          "start": "empty_containers_dock",
+          "end": "Z32C"
+        },
+        {
+          "container": 2,
+          "start": "empty_containers_dock",
+          "end": "Z13B"
+        }
+      ]
+    },
+    {
+      "truck": "tr4",
+      "path": [
+        {
+          "container": 8,
+          "start": "empty_containers_dock",
+          "end": "Z26C"
+        },
+        {
+          "container": 9,
+          "start": "empty_containers_dock",
+          "end": "NPC"
+        }
+      ]
+    },
+    {
+      "truck": "tr5",
+      "path": [
+        {
+          "container": 6,
+          "start": "docks",
+          "end": "ZL4B"
+        },
+        {
+          "container": 7,
+          "start": "empty_containers_dock",
+          "end": "C22"
+        }
+      ]
+    }
+  ]
+}

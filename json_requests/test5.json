@@ -1,0 +1,36 @@
+{
+    "trucks":2,
+    "reach_stacker_at":"C22",
+    "containers": [
+        {
+            "id": 1,
+            "service_type": "STUFF",
+            "warehouse": "Z32C",
+            "type": "KO"
+        },
+        {
+            "id": 2,
+            "service_type": "STUFF",
+            "warehouse": "Z13B",
+            "type": "KO"
+        },
+        {
+            "id": 3,
+            "service_type": "STRIP",
+            "warehouse": "Z33D",
+            "type": "ZA"
+        },
+        {
+            "id": 4,
+            "service_type": "STRIP",
+            "warehouse": "Z51A",
+            "type": "ZA"
+        },
+        {
+            "id": 5,
+            "service_type": "STRIP",
+            "warehouse": "Z33B",
+            "type": "KO"
+        }
+    ]
+}

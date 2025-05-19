@@ -1,0 +1,65 @@
+{
+    "trucks":5,
+    "containers": [
+        {
+            "id": 1,
+            "service_type": "STUFF",
+            "warehouse": "Z32C",
+            "type": "KO"
+        },
+        {
+            "id": 2,
+            "service_type": "STUFF",
+            "warehouse": "Z13B",
+            "type": "KO"
+        },
+        {
+            "id": 3,
+            "service_type": "STRIP",
+            "warehouse": "Z33D",
+            "type": "ZA"
+        },
+        {
+            "id": 4,
+            "service_type": "STRIP",
+            "warehouse": "Z51A",
+            "type": "ZA"
+        },
+        {
+            "id": 5,
+            "service_type": "STRIP",
+            "warehouse": "Z33B",
+            "type": "KO"
+        },
+        {
+            "id": 6,
+            "service_type": "STRIP",
+            "warehouse": "ZL4B",
+            "type": "NA"
+        },
+        {
+            "id": 7,
+            "service_type": "STUFF",
+            "warehouse": "C22",
+            "type": "NA"
+        },
+        {
+            "id": 8,
+            "service_type": "STUFF",
+            "warehouse": "Z26C",
+            "type": "ZA"
+        },
+        {
+            "id": 9,
+            "service_type": "STUFF",
+            "warehouse": "NPC",
+            "type": "ZA"
+        },
+        {
+            "id": 10,
+            "service_type": "STUFF",
+            "warehouse": "Z50B",
+            "type": "KO"
+        }
+    ]
+}
