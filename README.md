@@ -67,7 +67,8 @@ Example of a Json Request
             "type": "KO"
         }
     ]
-}```
+}
+```
 
 "Trucks:" is the number of trucks available, "reach_stacker:" and "containers:" is a list of containers with service type and destination. The "reach_stacker:" is ignored in cases of forming the daily plan, however it is *necessary* in cases of replaning.
 
